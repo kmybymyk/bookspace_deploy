@@ -1,76 +1,23 @@
 # BookSpace Deploy
 
-BookSpace의 public 배포용 저장소입니다.  
-Electron 기반 EPUB 저작/편집기 코드를 중심으로 유지하며, private 원본 저장소의 내부 운영 문서와 작업 로그는 포함하지 않습니다.
+이 저장소는 BookSpace 앱의 공개 업데이트 자산을 위한 레포입니다.
 
-## 포함 범위
-- 문서 구조 편집
-- 본문 편집(Tiptap)
-- 디자인 패널
-- EPUB/DOCX/Markdown import-export
-- Electron 데스크톱 앱 셸
+## 용도
+- GitHub Releases에 macOS 업데이트 파일을 게시
+- `latest-mac.yml`, `zip`, `dmg`, `blockmap` 같은 auto-update 자산 제공
 
-## 제외 범위
-- 내부 작업 로그와 운영 메모
-- 사내 기획 초안과 실행 계획 문서
-- 제3자 문서 덤프
-- 릴리즈 산출물, 인증서, 로컬 임시 파일
+## 포함하지 않는 것
+- 앱 소스 코드
+- 내부 기획 문서
+- 작업 로그
+- 운영 메모
 
-## 요구사항
-- Node.js 18+
-- npm 9+
+## 운영 원칙
+- 실제 개발은 private 원본 레포 `bookspace`에서 진행합니다.
+- 이 레포는 코드 mirror가 아니라 release asset 채널입니다.
+- 소스 파일은 이 레포에 커밋하지 않습니다.
 
-## 시작하기
-```bash
-npm install
-npm run dev
-```
+## 현재 구조
+- 기본 브랜치에는 최소 안내 파일만 유지
+- 실제 배포 파일은 GitHub Releases 자산으로만 게시
 
-Editor-only 개발 실행:
-
-```bash
-npm run dev:editor
-```
-
-프로덕션 빌드:
-
-```bash
-npm run build
-```
-
-패키징:
-
-```bash
-npm run package
-```
-
-## 주요 스크립트
-- `npm run dev`: Vite + Electron 개발 실행
-- `npm run dev:editor`: editor-only 개발 실행
-- `npm run build`: renderer/electron 빌드
-- `npm run package`: electron-builder 패키징
-- `npm run lint`: ESLint 실행
-- `npm run qa:functional`: 핵심 기능 회귀 QA
-- `npm run qa:docx`: DOCX 시나리오 QA
-- `npm run qa:epub:integrity`: EPUB exporter 정적 무결성 QA
-
-## 디렉터리 개요
-```text
-electron/
-src/
-shared/
-scripts/
-server/
-supabase/
-public/
-build/
-```
-
-## 공개 정책
-- 이 저장소는 public 배포용 미러입니다.
-- 실제 운영 비밀값, 인증서, 토큰은 포함하지 않습니다.
-- private 원본 저장소의 내부 문서와 운영 절차는 별도로 관리합니다.
-
-## 라이선스
-아직 별도 LICENSE를 추가하지 않았습니다.  
-공개 정책을 확정하면 라이선스 파일을 추가하세요.
