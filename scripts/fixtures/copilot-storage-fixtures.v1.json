@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "name": "saved-project-scoped-by-path",
+      "input": {
+        "projectPath": "/Users/myk/books/novel.bksp",
+        "projectSessionId": "session-a",
+        "metadata": {
+          "title": "Novel A",
+          "authors": [{ "id": "author-a" }],
+          "language": "ko"
+        }
+      },
+      "expectScopePrefix": "file:"
+    },
+    {
+      "name": "draft-project-scoped-by-session",
+      "input": {
+        "projectPath": null,
+        "projectSessionId": "session-b",
+        "metadata": {
+          "title": "Untitled",
+          "authors": [{ "id": "author-a" }],
+          "language": "ko"
+        }
+      },
+      "expectScopePrefix": "draft-session:"
+    },
+    {
+      "name": "different-draft-session-must-differ",
+      "input": {
+        "projectPath": null,
+        "projectSessionId": "session-c",
+        "metadata": {
+          "title": "Untitled",
+          "authors": [{ "id": "author-a" }],
+          "language": "ko"
+        }
+      },
+      "compareWith": {
+        "projectPath": null,
+        "projectSessionId": "session-d",
+        "metadata": {
+          "title": "Untitled",
+          "authors": [{ "id": "author-a" }],
+          "language": "ko"
+        }
+      },
+      "expectDifferent": true
+    }
+  ]
+}

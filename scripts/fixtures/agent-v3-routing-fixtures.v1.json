@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-03-11T00:00:00.000Z",
+  "cases": [
+    {
+      "id": "editorial-page-flow",
+      "prompt": "이 페이지 흐름이 어때?",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "editorial-consistency",
+      "prompt": "주인공 말투가 일관성 있는지 봐줘",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "editorial-feedback-imperative",
+      "prompt": "이 챕터 피드백 해줘",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "product-guide-feature-exists",
+      "prompt": "이 기능 있어?",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "product-guide-how-to-export",
+      "prompt": "EPUB 내보내기는 어떻게 해?",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "next-action-coach",
+      "prompt": "다음엔 뭘 점검하면 좋을까?",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "release-check-question",
+      "prompt": "출간 전에 원고 기준으로 뭘 점검해야 해?",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "command-rewrite-selection",
+      "prompt": "선택 문단 다듬어줘",
+      "hasSelection": true,
+      "expectedRoute": "command",
+      "expectedIntent": "rewrite_selection"
+    }
+  ]
+}

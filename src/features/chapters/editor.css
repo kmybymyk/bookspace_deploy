@@ -1,0 +1,472 @@
+/* 기본 에디터 스타일 */
+.ProseMirror {
+    outline: none;
+    min-height: 0;
+    color: #171717;
+    /* neutral-900 */
+}
+
+.book-editor .ProseMirror {
+    font-family: var(--editor-font-family);
+    font-size: var(--editor-font-size);
+    line-height: var(--editor-line-height);
+    letter-spacing: var(--editor-letter-spacing);
+    min-height: var(--editor-content-min-height, 620px);
+    display: flow-root;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.book-editor .tiptap,
+.book-editor .tiptap-root {
+    height: auto;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.book-editor {
+    overflow-x: hidden;
+    min-width: 0;
+}
+
+.book-editor .ProseMirror sup,
+.book-editor .ProseMirror sub {
+    font-family: var(--editor-contrast-font-family);
+}
+
+.book-editor .ProseMirror [data-block-font='serif'] {
+    font-family: var(--editor-serif-font-family) !important;
+}
+
+.book-editor .ProseMirror [data-block-font='sans'] {
+    font-family: var(--editor-sans-font-family) !important;
+}
+
+.book-editor .ProseMirror h1 {
+    font-size: var(--editor-title-font-size);
+    font-family: var(--editor-title-font-family);
+}
+
+.book-editor .ProseMirror h2 {
+    font-size: var(--editor-subhead-font-size);
+    font-family: var(--editor-subhead-font-family);
+}
+
+.book-editor .ProseMirror h3 {
+    font-size: var(--editor-font-size);
+    font-family: var(--editor-font-family);
+}
+
+.book-editor .ProseMirror h4 {
+    font-size: var(--editor-h4-font-size);
+    font-family: var(--editor-h4-font-family);
+}
+
+.book-editor .ProseMirror h5 {
+    font-size: var(--editor-h5-font-size);
+    font-family: var(--editor-h5-font-family);
+}
+
+.book-editor .ProseMirror h6 {
+    font-size: var(--editor-h6-font-size);
+    font-family: var(--editor-h6-font-family);
+}
+
+.book-editor .ProseMirror p {
+    margin: 0 0 var(--editor-paragraph-spacing);
+    text-indent: var(--editor-text-indent);
+}
+
+.book-editor .ProseMirror p:last-child,
+.book-editor .ProseMirror ul:last-child,
+.book-editor .ProseMirror ol:last-child,
+.book-editor .ProseMirror blockquote:last-child,
+.book-editor .ProseMirror table:last-child,
+.book-editor .ProseMirror hr:last-child {
+    margin-bottom: 0;
+}
+
+.book-editor .ProseMirror p.footnote,
+.book-editor .ProseMirror p.endnote {
+    font-size: 0.9em;
+    line-height: 1.6;
+    text-indent: 0;
+    color: #4b5563;
+}
+
+.book-editor .ProseMirror p.footnote-start,
+.book-editor .ProseMirror p.endnote-start {
+    border-top: 1px solid #d1d5db;
+    padding-top: 0.75em;
+    margin-top: 1.5em;
+}
+
+.book-editor .ProseMirror a sup,
+.book-editor .ProseMirror sup a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.book-editor .ProseMirror a[href^="#"] {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.book-editor .ProseMirror a:not([href^="#"]) {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.08em;
+    text-decoration-skip-ink: auto;
+}
+
+.book-editor .ProseMirror ul,
+.book-editor .ProseMirror ol {
+    margin: 0 0 var(--editor-paragraph-spacing) 1.4em;
+    padding: 0;
+}
+
+.book-editor .ProseMirror ul li,
+.book-editor .ProseMirror ol li {
+    margin: 0.2em 0;
+}
+
+.book-editor .ProseMirror ul.list-circle {
+    list-style-type: circle;
+}
+
+.book-editor .ProseMirror ul.list-square {
+    list-style-type: square;
+}
+
+.book-editor.no-first-indent .ProseMirror p:first-of-type {
+    text-indent: 0;
+}
+
+.book-editor .ProseMirror .img-left,
+.book-editor .ProseMirror .img-right,
+.book-editor .ProseMirror .img-center {
+    max-width: var(--editor-image-max-width);
+}
+
+.ProseMirror-focused p.is-editor-empty:first-child::before {
+    color: #c5cad3;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+.ProseMirror h2.is-empty::before,
+.ProseMirror h3.is-empty::before,
+.ProseMirror h4.is-empty::before,
+.ProseMirror h5.is-empty::before,
+.ProseMirror h6.is-empty::before,
+.ProseMirror h2.is-editor-empty::before,
+.ProseMirror h3.is-editor-empty::before,
+.ProseMirror h4.is-editor-empty::before,
+.ProseMirror h5.is-editor-empty::before,
+.ProseMirror h6.is-editor-empty::before {
+    color: #c5cad3;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Blockquote/작성노트 내부에서는 slash placeholder를 숨긴다. */
+.ProseMirror blockquote p.is-editor-empty::before {
+    content: none !important;
+}
+
+/* Tailwind Typography(prose) 기본 blockquote 인용부호 비활성화 */
+.book-editor .ProseMirror blockquote p::before,
+.book-editor .ProseMirror blockquote p::after,
+.book-editor .ProseMirror blockquote p:first-of-type::before,
+.book-editor .ProseMirror blockquote p:last-of-type::after {
+    content: none !important;
+}
+
+/* 드롭캡 (Drop Cap) */
+.ProseMirror .dropcap::first-letter {
+    float: left;
+    font-size: 3.5em;
+    line-height: 0.8;
+    margin-right: 0.1em;
+    margin-top: 0.1em;
+    font-weight: bold;
+    color: #0d9488;
+    /* Brand Color */
+}
+
+/* 콜아웃 (Callout / Box) */
+.ProseMirror .callout {
+    background-color: #f3f4f6;
+    /* neutral-100 */
+    border-left: 4px solid #0d9488;
+    /* Brand Color */
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0.25rem;
+}
+
+.ProseMirror .callout p {
+    margin: 0;
+}
+
+.ProseMirror blockquote {
+    border: 0;
+    margin: 1.4rem 0;
+    padding: 0.35rem 0;
+    color: #374151;
+    text-align: center;
+    font-family: var(--editor-serif-font-family);
+}
+
+.book-editor .ProseMirror blockquote p {
+    text-indent: 0 !important;
+}
+
+.ProseMirror blockquote::before,
+.ProseMirror blockquote::after {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #9ca3af;
+    text-align: inherit;
+    font-family: var(--editor-serif-font-family);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.ProseMirror blockquote::before {
+    content: "❝";
+    margin-bottom: 0.35rem;
+}
+
+.ProseMirror blockquote::after {
+    content: "❞";
+    margin-top: 0.35rem;
+}
+
+.ProseMirror blockquote.quote-note {
+    border: 0;
+    background: #f3f4f6;
+    color: #1f2937;
+    padding: 0.85rem 1rem;
+    border-radius: 0;
+    text-align: left;
+}
+
+.ProseMirror blockquote.quote-note::before,
+.ProseMirror blockquote.quote-note::after {
+    content: none;
+}
+
+.ProseMirror blockquote.quote-note,
+.ProseMirror blockquote.quote-note * {
+    font-style: normal !important;
+}
+
+.ProseMirror blockquote.quote-emphasis {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
+    padding: 0.85rem 1rem;
+    border-radius: 0.4rem;
+    font-style: normal;
+}
+
+/* 표 셀 내부 본문은 일반 문단 간격/들여쓰기 규칙을 따르지 않도록 분리한다. */
+.book-editor .ProseMirror th p,
+.book-editor .ProseMirror td p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.book-editor .ProseMirror th p + p,
+.book-editor .ProseMirror td p + p {
+    margin-top: 0.35em;
+}
+
+.ProseMirror .selectedCell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 148, 136, 0.08);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.ProseMirror .column-resize-handle {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    bottom: -1px;
+    width: 4px;
+    background: #0d9488;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.ProseMirror.resize-cursor {
+    cursor: col-resize;
+}
+
+/* Keep table inside frame and signal when columns are too dense. */
+.book-editor .ProseMirror .tableWrapper {
+    position: relative;
+}
+
+.book-editor .ProseMirror .tableWrapper[data-table-overset='true']::after {
+    content: "Narrow table frame";
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 4;
+    border-radius: 9999px;
+    background: rgba(245, 158, 11, 0.18);
+    color: #92400e;
+    border: 1px solid rgba(245, 158, 11, 0.55);
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 4px 6px;
+    pointer-events: none;
+}
+
+.book-editor .ProseMirror .tableWrapper[data-table-overset='true'] th,
+.book-editor .ProseMirror .tableWrapper[data-table-overset='true'] td,
+.book-editor .ProseMirror .tableWrapper[data-table-overset='true'] th p,
+.book-editor .ProseMirror .tableWrapper[data-table-overset='true'] td p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+/* Table node selection feedback for allowTableNodeSelection mode. */
+.book-editor .ProseMirror table.ProseMirror-selectednode {
+    outline: 2px solid rgba(13, 148, 136, 0.9);
+    outline-offset: 2px;
+}
+
+/* Ensure table block font applies to all descendants consistently. */
+.book-editor .ProseMirror table[data-block-font='serif'],
+.book-editor .ProseMirror table[data-block-font='serif'] th,
+.book-editor .ProseMirror table[data-block-font='serif'] td,
+.book-editor .ProseMirror table[data-block-font='serif'] p {
+    font-family: var(--editor-serif-font-family) !important;
+}
+
+.book-editor .ProseMirror table[data-block-font='sans'],
+.book-editor .ProseMirror table[data-block-font='sans'] th,
+.book-editor .ProseMirror table[data-block-font='sans'] td,
+.book-editor .ProseMirror table[data-block-font='sans'] p {
+    font-family: var(--editor-sans-font-family) !important;
+}
+
+/* 이미지 정렬 */
+.ProseMirror img.ProseMirror-selectednode,
+.ProseMirror figure.book-editor-image.ProseMirror-selectednode img {
+    outline: 2px solid #0d9488;
+}
+
+.ProseMirror figure.book-editor-image {
+    margin-top: 0.65rem;
+    margin-bottom: 1.15rem;
+}
+
+.ProseMirror figure.book-editor-image img {
+    display: block;
+}
+
+.ProseMirror .book-editor-image-caption {
+    display: block;
+    margin-top: 0.45rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid rgba(156, 163, 175, 0.28);
+    transition: border-color 160ms ease, opacity 160ms ease;
+}
+
+.ProseMirror .book-editor-image-caption[data-empty='true'] {
+    opacity: 0.82;
+}
+
+.ProseMirror .book-editor-image-caption.is-editing {
+    border-top-color: rgba(13, 148, 136, 0.42);
+}
+
+.ProseMirror .book-editor-image-caption-input {
+    display: block;
+    width: 100%;
+    min-height: 36px;
+    padding: 0.1rem 0.35rem 0;
+    border: 0;
+    background: transparent;
+    color: #4b5563;
+    font: inherit;
+    font-size: 0.94em;
+    line-height: 1.55;
+    text-align: center;
+    resize: none;
+    overflow: hidden;
+}
+
+.ProseMirror .book-editor-image-caption-input::placeholder {
+    color: #9ca3af;
+}
+
+.ProseMirror .book-editor-image-caption-input:focus {
+    outline: none;
+    color: #1f2937;
+}
+
+.ProseMirror .img-left {
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    max-width: 50%;
+    clear: both;
+}
+
+.ProseMirror .img-right {
+    float: right;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    max-width: 50%;
+    clear: both;
+}
+
+.ProseMirror .img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 섹션 구분선 */
+.ProseMirror hr.rule-solid {
+    border: 0;
+    border-top: 1px solid #9ca3af;
+    margin: 2rem 0;
+    height: 0;
+}
+
+.ProseMirror hr.rule-dotted {
+    border: 0;
+    border-top: 2px dotted #9ca3af;
+    margin: 2rem 0;
+    height: 0;
+}
+
+.ProseMirror hr.rule-double {
+    border: 0;
+    border-top: 3px double #9ca3af;
+    margin: 2rem 0;
+    height: 0;
+}

@@ -1,0 +1,209 @@
+{
+  "version": "1.1.0",
+  "generatedAt": "2026-03-08T00:00:00.000Z",
+  "cases": [
+    {
+      "id": "chat-greeting-ko",
+      "prompt": "안녕, 오늘 뭐 할 수 있어?",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "chat-greeting-en",
+      "prompt": "hello there",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    },
+    {
+      "id": "append-text-ko",
+      "prompt": "마지막에 감사 인사 한 문단 덧붙여줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "append_text"
+    },
+    {
+      "id": "append-write-current-page-ko",
+      "prompt": "프롤로그 페이지에 한글로 짧은 세마디 문단의 글 작성해줘 임의로.",
+      "hasSelection": true,
+      "expectedRoute": "command",
+      "expectedIntent": "append_text"
+    },
+    {
+      "id": "find-replace-ko",
+      "prompt": "\"초안\"을 \"원고\"로 모두 교체해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "find_replace"
+    },
+    {
+      "id": "save-project-ko",
+      "prompt": "프로젝트 저장해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "save_project"
+    },
+    {
+      "id": "rename-chapter-ko",
+      "prompt": "챕터 이름을 \"프롤로그\"로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "rename_chapter"
+    },
+    {
+      "id": "rename-missing-ordinal-ko",
+      "prompt": "3장 제목을 \"바다를 건너는 밤\"으로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "rename_chapter"
+    },
+    {
+      "id": "delete-chapter-ko",
+      "prompt": "이 챕터 삭제해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "delete_chapter"
+    },
+    {
+      "id": "delete-chapter-en",
+      "prompt": "delete chapter",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "delete_chapter"
+    },
+    {
+      "id": "move-chapter-ko",
+      "prompt": "이 챕터를 맨 뒤로 이동해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "move_chapter"
+    },
+    {
+      "id": "move-chapter-en",
+      "prompt": "move chapter to the end",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "move_chapter"
+    },
+    {
+      "id": "set-chapter-type-ko",
+      "prompt": "이 챕터를 파트로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "set_chapter_type"
+    },
+    {
+      "id": "set-typography-ko",
+      "prompt": "본문 폰트와 행간을 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "set_typography"
+    },
+    {
+      "id": "set-page-background-ko",
+      "prompt": "현재 챕터 배경색을 #faf3e8로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "set_page_background"
+    },
+    {
+      "id": "apply-theme-ko",
+      "prompt": "에세이 테마 적용해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "apply_theme"
+    },
+    {
+      "id": "update-book-info-ko",
+      "prompt": "책 정보에서 출판사를 민음사로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "update_book_info"
+    },
+    {
+      "id": "update-book-title-ko",
+      "prompt": "책 제목을 바다를 건너는 밤으로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "update_book_info"
+    },
+    {
+      "id": "update-book-info-author-language-ko",
+      "prompt": "책 제목, 대표 저자, 언어를 자연스럽게 정리해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "update_book_info"
+    },
+    {
+      "id": "set-cover-asset-ko",
+      "prompt": "표지 이미지를 https://example.com/cover.jpg 로 바꿔줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "set_cover_asset"
+    },
+    {
+      "id": "export-project-ko",
+      "prompt": "프로젝트를 docx로 내보내기 해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "export_project"
+    },
+    {
+      "id": "restore-snapshot-ko",
+      "prompt": "마지막 스냅샷으로 복원해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "restore_snapshot"
+    },
+    {
+      "id": "create-page-ko",
+      "prompt": "빈 페이지 만들어줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "create_chapter"
+    },
+    {
+      "id": "create-part-ko",
+      "prompt": "파트 2 새로 만들어주고, 하위에 챕터 네개 만들어줘",
+      "hasSelection": true,
+      "expectedRoute": "command",
+      "expectedIntent": "create_chapter"
+    },
+    {
+      "id": "insert-table-ko",
+      "prompt": "이 내용을 표로 정리해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "insert_table"
+    },
+    {
+      "id": "insert-illustration-ko",
+      "prompt": "여기에 삽화 하나 넣어줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "insert_illustration"
+    },
+    {
+      "id": "feedback-report-ko",
+      "prompt": "이 챕터 피드백 해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedIntent": "feedback_report"
+    },
+    {
+      "id": "rewrite-selection-ko",
+      "prompt": "선택 문단 다듬어줘",
+      "hasSelection": true,
+      "expectedRoute": "command",
+      "expectedIntent": "rewrite_selection"
+    },
+    {
+      "id": "rewrite-selection-no-context",
+      "prompt": "선택 문단 다듬어줘",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedIntent": null
+    }
+  ]
+}

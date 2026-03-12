@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "multi-create-table-illustration",
+      "prompt": "새 페이지 만들고 표 넣고 삽화도 추가해줘",
+      "hasSelection": false,
+      "expectedRoute": "command",
+      "expectedPrimaryIntent": "insert_table",
+      "expectedIntents": ["insert_table", "insert_illustration", "create_chapter"]
+    },
+    {
+      "id": "multi-rewrite-create",
+      "prompt": "이 문단 다듬고 새 페이지도 만들어줘",
+      "hasSelection": true,
+      "expectedRoute": "command",
+      "expectedPrimaryIntent": "create_chapter",
+      "expectedIntents": ["create_chapter", "rewrite_selection"]
+    },
+    {
+      "id": "rewrite-without-selection",
+      "prompt": "문단 다듬고 톤 고쳐줘",
+      "hasSelection": false,
+      "expectedRoute": "chat",
+      "expectedPrimaryIntent": null,
+      "expectedIntents": []
+    }
+  ]
+}

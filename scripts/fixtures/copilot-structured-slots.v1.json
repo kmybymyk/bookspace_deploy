@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "table-basic-size",
+      "type": "insert_table",
+      "prompt": "3열 2행 표 넣어줘",
+      "expected": {
+        "headersLength": 3,
+        "rowsLength": 2
+      }
+    },
+    {
+      "id": "table-header-style-position",
+      "type": "insert_table",
+      "prompt": "표 만들어줘. 헤더: 이름, 역할, 비고. 스타일: clean. 위치: 5",
+      "expected": {
+        "headers": ["이름", "역할", "비고"],
+        "style": "clean",
+        "position": 5
+      }
+    },
+    {
+      "id": "illustration-alt-caption",
+      "type": "insert_illustration",
+      "prompt": "삽화 넣어줘. alt: 새벽 숲 장면. 캡션: 프롤로그 장면",
+      "expected": {
+        "alt": "새벽 숲 장면",
+        "caption": "프롤로그 장면"
+      }
+    },
+    {
+      "id": "illustration-url-width-position",
+      "type": "insert_illustration",
+      "prompt": "이미지 삽입 https://example.com/scene.png width 640 위치 3",
+      "expected": {
+        "imageSource": "https://example.com/scene.png",
+        "width": 640,
+        "position": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": "agent-v3-launch-readiness.v1",
+  "cases": [
+    {
+      "id": "page-coach-01",
+      "prompt": "이 페이지 흐름이 어때?",
+      "expectedRoute": "chat",
+      "expectedMode": "editorial_support"
+    },
+    {
+      "id": "product-guide-01",
+      "prompt": "EPUB 내보내기는 어떻게 해?",
+      "expectedRoute": "chat",
+      "expectedMode": "product_guidance"
+    },
+    {
+      "id": "book-context-01",
+      "prompt": "주인공 말투가 책 전체에서 일관돼?",
+      "expectedRoute": "chat",
+      "expectedMode": "book_context_review"
+    },
+    {
+      "id": "next-action-01",
+      "prompt": "다음엔 뭘 점검하면 좋을까?",
+      "expectedRoute": "chat",
+      "expectedMode": "next_action_coach"
+    },
+    {
+      "id": "release-check-01",
+      "prompt": "출간 전에 원고 기준으로 뭘 점검해야 해?",
+      "expectedRoute": "chat",
+      "expectedMode": "release_editorial_check"
+    }
+  ]
+}

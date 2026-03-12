@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "defaultRoute": "chat",
+  "intents": [
+    {
+      "intent": "restore_snapshot",
+      "priority": 126,
+      "keywordsAny": ["복원", "되돌려", "스냅샷", "restore snapshot", "restore version", "버전 복원"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "export_project",
+      "priority": 124,
+      "keywordsAny": ["내보내기", "export", "epub로", "docx로", "export project"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "set_cover_asset",
+      "priority": 122,
+      "keywordsAny": ["표지", "cover", "뒷표지", "publisher logo", "출판사 로고"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "update_book_info",
+      "priority": 121,
+      "keywordsAny": ["책 정보", "book info", "메타데이터", "metadata", "책 제목", "book title", "출판사", "저자", "설명"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "apply_theme",
+      "priority": 120,
+      "keywordsAny": ["테마", "theme", "novel theme", "essay theme"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "set_typography",
+      "priority": 119,
+      "keywordsAny": ["타이포", "typography", "폰트", "font", "line height", "행간", "들여쓰기"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "rename_chapter",
+      "priority": 118,
+      "keywordsAny": [
+        "장 제목",
+        "챕터 이름",
+        "페이지 제목",
+        "프롤로그 제목",
+        "에필로그 제목",
+        "chapter title",
+        "chapter name"
+      ],
+      "keywordsAll": ["바꿔"]
+    },
+    {
+      "intent": "set_page_background",
+      "priority": 118,
+      "keywordsAny": ["배경", "background", "배경색", "page background"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "rename_chapter",
+      "priority": 117,
+      "keywordsAny": ["이름 변경", "rename chapter", "제목 바꿔", "챕터 이름"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "delete_chapter",
+      "priority": 116,
+      "keywordsAny": ["삭제", "지워", "remove chapter", "delete chapter"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "move_chapter",
+      "priority": 114,
+      "keywordsAny": ["이동", "move chapter", "순서 바꿔", "맨 앞으로", "맨 뒤로"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "set_chapter_type",
+      "priority": 113,
+      "keywordsAny": ["파트로", "front matter", "back matter", "divider", "챕터 유형", "type chapter"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "find_replace",
+      "priority": 115,
+      "keywordsAny": ["찾아 바꾸기", "찾아바꾸기", "replace all", "find and replace", "치환", "replace", "find replace", "교체"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "save_project",
+      "priority": 108,
+      "keywordsAny": ["저장", "save", "save as", "다른 이름으로 저장", "프로젝트 저장"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "append_text",
+      "priority": 106,
+      "keywordsAny": [
+        "프롤로그에 글",
+        "프롤로그에 써",
+        "프롤로그에 원고",
+        "에필로그에 글",
+        "에필로그에 써",
+        "에필로그에 원고"
+      ],
+      "keywordsAll": []
+    },
+    {
+      "intent": "append_text",
+      "priority": 107,
+      "keywordsAny": ["작성해줘", "작성해 줘", "써줘", "써 줘", "write", "draft"],
+      "keywordsAll": ["페이지"]
+    },
+    {
+      "intent": "append_text",
+      "priority": 95,
+      "keywordsAny": ["이어 써", "이어써", "append", "append text", "덧붙여", "추가 문단", "문단 추가", "뒤에 추가"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "insert_table",
+      "priority": 100,
+      "keywordsAny": ["표", "table", "행", "열", "column", "row"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "insert_illustration",
+      "priority": 90,
+      "keywordsAny": ["이미지", "삽화", "illustration", "image"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "create_chapter",
+      "priority": 80,
+      "keywordsAny": [
+        "챕터",
+        "chapter",
+        "목차",
+        "outline",
+        "구성",
+        "페이지",
+        "page",
+        "xhtml",
+        "빈 페이지",
+        "새 페이지",
+        "new page",
+        "blank page"
+      ],
+      "keywordsAll": []
+    },
+    {
+      "intent": "feedback_report",
+      "priority": 85,
+      "keywordsAny": ["피드백", "검토", "review", "feedback"],
+      "keywordsAll": []
+    },
+    {
+      "intent": "rewrite_selection",
+      "priority": 60,
+      "keywordsAny": [
+        "수정",
+        "고쳐",
+        "다듬",
+        "교정",
+        "rewrite",
+        "rephrase",
+        "edit",
+        "polish",
+        "문장",
+        "문단",
+        "톤",
+        "맞춤법"
+      ],
+      "keywordsAll": []
+    }
+  ]
+}
